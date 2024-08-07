@@ -22,7 +22,7 @@ const PostList = () => {
         controller.abort();
       };
   },[]);
-
+console.log("post list is",postList);
 
   return (
     <>
