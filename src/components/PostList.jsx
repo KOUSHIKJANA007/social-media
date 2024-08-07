@@ -25,22 +25,22 @@ const PostList = () => {
 ]
   // const { postList, addInitialPosts } = useContext(PostListData);
   const [fetching,setFetching]=useState(false);
-  useEffect(() => {
-    setFetching(true);
+  // useEffect(() => {
+  //   setFetching(true);
 
-    const controller=new AbortController();
-    const signal=controller.signal;
-    fetch('https://dummyjson.com/posts',{signal})
-      .then((res) => res.json())
-      .then((data) => {
-        // addInitialPosts(data.posts);
-        setFetching(false);
-      });
-      return ()=>{
-        controller.abort();
-      };
-  },[]);
-console.log("post list is",postList);
+  //   const controller=new AbortController();
+  //   const signal=controller.signal;
+  //   fetch('https://dummyjson.com/posts',{signal})
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       // addInitialPosts(data.posts);
+  //       setFetching(false);
+  //     });
+  //     return ()=>{
+  //       controller.abort();
+  //     };
+  // },[]);
+console.log("post list is",DEFAULT_POST_LIST);
 
   return (
     <>
