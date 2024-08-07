@@ -45,7 +45,7 @@ console.log("post list is",DEFAULT_POST_LIST);
   return (
     <>
     {fetching && <LoadingSpinner></LoadingSpinner>}
-      { !fetching && postList.length === 0 && <WelcomeMessage></WelcomeMessage>}
+{/*       { !fetching && postList.length === 0 && <WelcomeMessage></WelcomeMessage>} */}
       {
         !fetching && DEFAULT_POST_LIST.map((post) => (
           <Post key={post.id} post={post}></Post>
